@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+</head>
+<body>
+	<header id="header">
+		<div class="container d-flex">
+			<h2><img src="images/logo.jpg" alt="Интернет магазин Слоник"></h2>
+			<form action="#">
+				<input type="text" name="search_query" placeholder="Поиск товаров">
+				<input type="submit" value="Поиск" name="search">
+			</form>
+			<div>
+				<a href="#" class="basket"><img src="images/basket.png" alt="">Корзина<div><span class="count_products">0</span></div></a>
+            <button class="auth" onclick="ModalLogin()"><img src="images/auth.png" alt=""><span>Войти</span></button>
+			</div>
+		</div>
+		<div class="black_line">
+			<div class="container d-flex">
+				<div>
+					<a href="#" onclick="showCatalog()" class="catalog"><img src="images/catalog.png" alt="Каталог товаров магазина Слоник"><span>Каталог</span> <span class="catalog_arrow">></span></a>
+					<div class="dropdown_catalog">
+						<ul class="categories">
+							<li onmouseover="hover(this)" class="for_babies"><a href="#" >Для малышей</a><span>></span></li>
+							<li onmouseover="hover(this)" class="table_games"><a href="#" >Настольные игры</a><span>></span></li>
+						</ul>
+						<div class="subcategories d-flex">
+							<ul class="sub_for_babies">
+								<li><a href="#">Погремушки</a></li>
+								<li><a href="#">Мобайлы, ночники</a></li>
+							</ul>
+							<ul class="sub_for_babies">
+								<li><a href="#">Игрушки для ванны</a></li>
+								<li><a href="#">Деревянные игрушки</a></li>
+							</ul>
+							<ul class="sub_table_games">
+								<li><a href="#">3D пазлы</a></li>
+								<li><a href="#">Классические пазлы</a></li>
+							</ul>
+							<ul class="sub_table_games">
+								<li><a href="#">Интеллектальные игры</a></li>
+								<li><a href="#">Развлекательные игры</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul>
+					<li><a href="#">Новинки</a></li>
+					<li><a href="#">Бренды</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">Лучшие предложения</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<section id="main_content">
+		<div class="container">
+			<div class="row">
+				<div class="col-9">
+					<h3><i class="far fa-star"></i>Новинки</h3>
+					<a href="#" class="all_products">Все новинки</a>
+					<div class="new_products products">
+						<div class="row">
+							<div class="col-4">
+								<div class="item">
+									<img src="images/cubika-1.jpg" alt="">
+									<h4><a href="#">Деревянная игрушка Cubika поезд с машинками</a></h4>
+									<p>Цена: 500 грн.</p>
+									<p><a href="#">0 отзывов</a></p>
+									<button data-id="1" class="basket_add">Добавить в корзину</button>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="item">
+									<img src="images/cubika-1.jpg" alt="">
+									<h4><a href="#">Деревянная игрушка Cubika поезд с машинками</a></h4>
+									<p>Цена: 500 грн.</p>
+									<p><a href="#">0 отзывов</a></p>
+									<button data-id="12" class="basket_add">Добавить в корзину</button>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="item">
+									<img src="images/cubika-1.jpg" alt="">
+									<h4><a href="#">Деревянная игрушка Cubika поезд с машинками</a></h4>
+									<p>Цена: 500 грн.</p>
+									<p><a href="#">0 отзывов</a></p>
+									<button data-id="14" class="basket_add">Добавить в корзину</button>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="item">
+									<img src="images/cubika-1.jpg" alt="">
+									<h4><a href="#">Деревянная игрушка Cubika поезд с машинками</a></h4>
+									<p>Цена: 500 грн.</p>
+									<p><a href="#">0 отзывов</a></p>
+									<button data-id="51" class="basket_add">Добавить в корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<h3>Подбор подарка</h3>
+					<form action="#">
+						<p>Укажите цену (грн):</p>
+						<input type="text" name="price_min_filter">
+						<input type="text" name="price_max_filter">
+						<p>Выберите категорию:</p>
+						<select name="categories_filter">
+						    <option value="1">Для малыша</option>
+						    <option value="2">Настольные игры</option>
+						</select>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="background_dark">
+			
+		</div>
+	</section>
+	<footer id="footer">
+		<div class="container">
+			<p>&copy; 2020. Все права защищены. Магазин СЛонЫк</p>
+		</div>
+	</footer>
+	<div class="modal_login">
+    <div class="modal_main_form">
+        <h2>Авторизация в системе:</h2>
+        <div>
+            <form action="#">
+                <h3>Войти в учетную запись:</h3>
+                <input type="text" name="login" placeholder="Ваш логин:">
+                <input type="password" placeholder="Ваш пароль:">
+                <input type="submit" placeholder="Авторизоваться">
+            </form>
+            <form action="#">
+                <h3>Создать новую учетную запись:</h3>
+                <input type="text" name="login" placeholder="Придумайте логин">
+                <input type="email" name="email" placeholder="Введите свой e-mail адрес">
+                <input type="password" name="password" placeholder="Придумайте пароль">
+                <input type="submit" name="registration" value="Зарегистрироваться">
+            </form>
+        </div>
+        <p onclick="ModalLogin()">Отмена</p>
+    </div>
+</div>
+	<script src="js/jquery-3-4-1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

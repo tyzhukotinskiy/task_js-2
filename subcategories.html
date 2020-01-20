@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+</head>
+<body>
+	<header id="header">
+		<div class="container d-flex">
+			<h2><img src="images/logo.jpg" alt="Интернет магазин Слоник"></h2>
+			<form action="#">
+				<input type="text" name="search_query" placeholder="Поиск товаров">
+				<input type="submit" value="Поиск" name="search">
+			</form>
+			<div>
+				<a href="#" class="basket"><img src="images/basket.png" alt="">Корзина</a>
+				<a href="#" class="auth"><img src="images/auth.png" alt="">Войти</a>
+			</div>
+		</div>
+		<div class="black_line">
+			<div class="container d-flex">
+				<div>
+					<a href="#" onclick="showCatalog()" class="catalog"><img src="images/catalog.png" alt="Каталог товаров магазина Слоник"><span>Каталог</span> <span class="catalog_arrow">></span></a>
+					<div class="dropdown_catalog">
+						<ul class="categories">
+							<li onmouseover="hover(this)" class="for_babies"><a href="#" >Для малышей</a><span>></span></li>
+							<li onmouseover="hover(this)" class="table_games"><a href="#" >Настольные игры</a><span>></span></li>
+						</ul>
+						<div class="subcategories d-flex">
+							<ul class="sub_for_babies">
+								<li><a href="#">Погремушки</a></li>
+								<li><a href="#">Мобайлы, ночники</a></li>
+							</ul>
+							<ul class="sub_for_babies">
+								<li><a href="#">Игрушки для ванны</a></li>
+								<li><a href="#">Деревянные игрушки</a></li>
+							</ul>
+							<ul class="sub_table_games">
+								<li><a href="#">3D пазлы</a></li>
+								<li><a href="#">Классические пазлы</a></li>
+							</ul>
+							<ul class="sub_table_games">
+								<li><a href="#">Интеллектальные игры</a></li>
+								<li><a href="#">Развлекательные игры</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul>
+					<li><a href="#">Новинки</a></li>
+					<li><a href="#">Бренды</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">Лучшие предложения</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<section id="main_content">
+		<div class="container">
+			<div class="crumbs">
+				<p><a href="main.html">Главная страница</a> / Категория</p>
+			</div>
+			<h3>Категория имя</h3>
+			<div class="row subcategories">
+				<div class="col-3">
+					<a href="#">
+						<img src="images/pogremushki.jpg" alt="">
+						<h4>Погремушки</h4>
+					</a>
+				</div>
+				<div class="col-3">
+					<a href="#">
+						<img src="images/nochnik.jpg" alt="">
+						<h4>Мобайлы, Ночники</h4>
+					</a>
+				</div>
+				<div class="col-3">
+					<a href="#">
+						<img src="images/dlya-vanny.jpg" alt="">
+						<h4>Игрушки для ванны</h4>
+					</a>
+				</div>
+				<div class="col-3">
+					<a href="#">
+						<img src="images/derevyannye-igrushki.jpg" alt="">
+						<h4>Деревянные игрушки</h4>
+					</a>
+				</div>
+				<div class="col-3">
+					<a href="#">
+						<img src="images/dlya-vanny.jpg" alt="">
+						<h4>Игрушки для ванны</h4>
+					</a>
+				</div>
+				<div class="col-3">
+					<a href="#">
+						<img src="images/derevyannye-igrushki.jpg" alt="">
+						<h4>Деревянные игрушки</h4>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="background_dark">
+			
+		</div>
+	</section>
+	<footer id="footer">
+		<div class="container">
+			<p>&copy; 2020. Все права защищены. Магазин СЛонЫк</p>
+		</div>
+	</footer>
+	<script src="js/jquery-3-4-1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
